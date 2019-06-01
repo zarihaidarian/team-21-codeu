@@ -79,4 +79,11 @@ public class Datastore {
 
     return messages;
   }
+
+  /** Returns the total number of messages for all users. */
+  public int gotTotalMessageCount(){
+    Query query = new Query("Message");
+    PreparedQuery results = datastore.preapare(query);
+    return results.countEntities(FetchOptions.Builder.withLimit(1000));
+  }
 }
