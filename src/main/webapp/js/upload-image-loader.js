@@ -8,3 +8,4 @@ function fetchBlobstoreUrlAndShowForm() {
             messageForm.action = imageUploadUrl;
             messageForm.classList.remove('hidden');
           });
+}
