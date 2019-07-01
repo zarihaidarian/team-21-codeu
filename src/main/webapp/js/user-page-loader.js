@@ -92,6 +92,7 @@ function buildMessageDiv(message) {
 
 /** Fetches data and populates the UI of the page. */
 function buildUI() {
+  ClassicEditor.create( document.getElementById('message-input') );
   setPageTitle();
   showMessageFormIfViewingSelf();
   fetchMessages();
