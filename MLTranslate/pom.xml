@@ -3,16 +3,27 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>myTranslate</groupId>
-  <artifactId>google-cloud-translation-hello-world</artifactId>
+  <groupId>io.happycoding</groupId>
+  <artifactId>minimal-google-translation</artifactId>
   <version>1</version>
+  <packaging>war</packaging>
 
   <properties>
-    <exec.mainClass>myTranslate.TranslationHelloWorld</exec.mainClass>
-    <exec.cleanupDaemonThreads>false</exec.cleanupDaemonThreads>
+    <!-- App Engine currently supports Java 8 -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-translate</artifactId>
@@ -20,4 +31,13 @@
     </dependency>
   </dependencies>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-maven-plugin</artifactId>
+        <version>1.9.71</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
