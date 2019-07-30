@@ -1,0 +1,194 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="/js/upload-image-loader.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Sign up to get connected to your fellow interns!</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fname">First Name</label>  
+  <div class="col-md-5">
+  <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lname">Last Name</label>  
+  <div class="col-md-5">
+  <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Email</label>  
+  <div class="col-md-5">
+  <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" required="">
+    <span class="help-block"></span>  
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="addr1">Address Line 1</label>  
+  <div class="col-md-5">
+  <input id="addr1" name="addr1" type="text" placeholder="Address Line 1" class="form-control input-md" required="">
+    <span class="help-block">Note that this is the address of the place you plan to lease.</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="addr2">Address Line 2</label>  
+  <div class="col-md-5">
+  <input id="addr2" name="addr2" type="text" placeholder="Address Line 2" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="city">City</label>  
+  <div class="col-md-4">
+  <input id="city" name="city" type="text" placeholder="City" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+ <label class="col-md-4 control-label" for="ssnein">State</label>  
+  <div class="col-md-5">
+    <select class="form-control" id="state" name="state">
+      <option value="">N/A</option>
+      <option value="AK">Alaska</option>
+      <option value="AL">Alabama</option>
+      <option value="AR">Arkansas</option>
+      <option value="AZ">Arizona</option>
+      <option value="CA">California</option>
+      <option value="CO">Colorado</option>
+      <option value="CT">Connecticut</option>
+      <option value="DC">District of Columbia</option>
+      <option value="DE">Delaware</option>
+      <option value="FL">Florida</option>
+      <option value="GA">Georgia</option>
+      <option value="HI">Hawaii</option>
+      <option value="IA">Iowa</option>
+      <option value="ID">Idaho</option>
+      <option value="IL">Illinois</option>
+      <option value="IN">Indiana</option>
+      <option value="KS">Kansas</option>
+      <option value="KY">Kentucky</option>
+      <option value="LA">Louisiana</option>
+      <option value="MA">Massachusetts</option>
+      <option value="MD">Maryland</option>
+      <option value="ME">Maine</option>
+      <option value="MI">Michigan</option>
+      <option value="MN">Minnesota</option>
+      <option value="MO">Missouri</option>
+      <option value="MS">Mississippi</option>
+      <option value="MT">Montana</option>
+      <option value="NC">North Carolina</option>
+      <option value="ND">North Dakota</option>
+      <option value="NE">Nebraska</option>
+      <option value="NH">New Hampshire</option>
+      <option value="NJ">New Jersey</option>
+      <option value="NM">New Mexico</option>
+      <option value="NV">Nevada</option>
+      <option value="NY">New York</option>
+      <option value="OH">Ohio</option>
+      <option value="OK">Oklahoma</option>
+      <option value="OR">Oregon</option>
+      <option value="PA">Pennsylvania</option>
+      <option value="PR">Puerto Rico</option>
+      <option value="RI">Rhode Island</option>
+      <option value="SC">South Carolina</option>
+      <option value="SD">South Dakota</option>
+      <option value="TN">Tennessee</option>
+      <option value="TX">Texas</option>
+      <option value="UT">Utah</option>
+      <option value="VA">Virginia</option>
+      <option value="VT">Vermont</option>
+      <option value="WA">Washington</option>
+      <option value="WI">Wisconsin</option>
+      <option value="WV">West Virginia</option>
+      <option value="WY">Wyoming</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="zip">Zip Code</label>  
+  <div class="col-md-4">
+  <input id="zip" name="zip" type="text" placeholder="5 Digit Zip Code" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="passwd">House Image</label>
+  <div class="col-md-5">
+<form id = "my-form" method="POST" enctype="multipart/form-data">
+      <p>Upload an image:</p>
+      <input type="file" name="image"><br><br>
+      <button>Upload</button>
+    </form>
+    </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="passwd">Password</label>  
+  <div class="col-md-5">
+  <input id="passwd" name="passwd" type="text" placeholder="Password" class="form-control input-md" required="">
+  <span class="help-block">You will need your email address and the password you create here, to login.</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="passwd">Repeat Password</label>  
+  <div class="col-md-5">
+  <input id="passwd" name="passwd" type="text" placeholder="Password" class="form-control input-md" required=""> 
+  </div>
+</div>
+
+<!-- Multiple Checkboxes (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="agree">Do You Agree?</label>
+  <div class="col-md-4">
+    <label class="checkbox-inline" for="agree-0">
+      <input type="checkbox" name="agree" id="agree-0" value="1">
+      Yes (You must agree to our terms of service which you can view by <a href="#" target="_blank">clicking here</a>
+    </label>
+  </div>
+</div>
+
+<div class="form-group">
+<label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <label class="checkbox-inline" for="submit">
+      <input class="btn btn-success" type="submit" name="submit" id="submit" onclick="window.location.href = '/';" value="Create Leaser Account">
+    </label>
+  </div>
+</div>
+
+</fieldset>
+</form>
